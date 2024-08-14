@@ -48,7 +48,8 @@ return (
     <div>
       <h1>Cursos SENAI 2024</h1>
       <ul>
-        {cursos.map(curso => (<li>
+        {cursos.map(curso => (
+            <li key={curso.id}>
             <p>{curso.titulo}</p>
             <p>{curso.preco}</p>
             <button onClick={() =>handleAddCurso(curso.id)}>Adicionar</button>
@@ -56,7 +57,8 @@ return (
       </ul>
       <h1>Carrinho de Compras</h1>
       <ul>
-        {shoppingCursos.map((item) => (<li>
+        {shoppingCursos.map((item) => (
+            <li key={item.produto.id}>
             <p>Produto:{item.produto.titulo}</p>
             <p>Preço:{item.produto.preco}</p>
             <p>Quantidade{item.quantidade}</p>
